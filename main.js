@@ -33,6 +33,7 @@ App.Collections.MapPoints = Backbone.Collection.extend({
 });
 
 App.Views.Checkbox = Backbone.View.extend({
+	tagName: 'span',
 	render: function() {
 		var html = '<input type=\"checkbox\" checked=\"true\" id=\"'+ 
 			this.model.get('chain') +'\">' + this.model.get('chain');
@@ -141,7 +142,9 @@ App.Views.Map = Backbone.View.extend ( {
 			var infoWindow = new google.maps.InfoWindow({
 
 				content: '<div>'+model.get('theater')+'</div>'+
-				'<div>'+ model.get('address')+'</div>'
+				'<div>'+ model.get('address')+'</div>'+'<div>'+
+				'<a href=\"'+model.get('url')+'\">Website</a>' +
+				'</div>'
 
 			});
 
