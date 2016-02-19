@@ -8,12 +8,6 @@ window.App = {
 	
 };
 
-// window.template = function(id){
-// 
-// 	return _.template( $('#' + id).html() );
-// };
-
-
 App.Models.MapPoint =  Backbone.Model.extend({
 
 	defaults: {
@@ -100,8 +94,7 @@ App.Views.Checkboxes = Backbone.View.extend({
 
 		isChecked = e.currentTarget.checked;
 		chainClicked = e.currentTarget.id;
-		//console.log( "isChecked = "+ isChecked);
-		//console.log( "The "+ chainClicked + " checkbox was clicked!");
+
 	
 		if (isChecked) {
 			//load data
